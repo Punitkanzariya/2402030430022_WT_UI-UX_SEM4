@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized E-learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Personalized E-learning</h1>
+        <nav>
+            <a href="#login" onclick="showSection('login')">Login</a>
+            <a href="#signup" onclick="showSection('signup')">Sign Up</a>
+            <a href="#courses" onclick="showSection('courses')">Courses</a>
+            <a href="#chat" onclick="showSection('chat')">Chat</a>
+            <a href="#cart" onclick="showSection('cart')">Cart</a>
+            <a href="#profile" onclick="showSection('profile')">Profile</a>
+        </nav>
+    </header>
+    
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Login</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#signup" onclick="showSection('signup')">Sign Up Here</a></p>
+        </form>
+    </section>
+    
+    <!-- Signup Section -->
+    <section id="signup">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+            
+            <label for="email-signup">Email:</label>
+            <input type="email" id="email-signup" required>
+            
+            <label for="password-signup">Password:</label>
+            <input type="password" id="password-signup" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+    
+    <!-- Courses Section -->
+    <section id="courses">
+        <h2>Top Courses</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>UI/UX Design</h3>
+                <p>$14.50</p>
+                <button class="add-to-cart" data-name="UI/UX Design" data-price="14.50">Add to Cart</button>
+            </div>
+            <div class="course">
+                <h3>Machine Learning</h3>
+                <p>$24.50</p>
+                <button class="add-to-cart" data-name="Machine Learning" data-price="24.50">Add to Cart</button>
+            </div>
+            <div class="course">
+                <h3>Wireframing</h3>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Wireframing" data-price="18.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chat Section -->
+    <section id="chat">
+        <h2>Chats</h2>
+        <div class="chat-item" onclick="openChat('Kishan')">
+            <img src="https://i.pravatar.cc/50?img=1" alt="Kishan">
+            <div class="chat-details">
+                <strong>Kishan</strong>
+                <p>Hey, how are you?</p>
+            </div>
+        </div>
+        <div class="chat-item" onclick="openChat('Dev')">
+            <img src="https://i.pravatar.cc/50?img=2" alt="Dev">
+            <div class="chat-details">
+                <strong>Dev</strong>
+                <p>Hey, how are you?</p>
+            </div>
+        </div>
+        <div class="chat-item" onclick="openChat('Dhruv')">
+            <img src="https://i.pravatar.cc/50?img=3" alt="Dhruv">
+            <div class="chat-details">
+                <strong>Dhruv</strong>
+                <p>Hey, how are you?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Window -->
+    <section id="chat-window" style="display: none;">
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+        <h2 id="chat-title">Chat</h2>
+        <div id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="chat-message" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+    
+    
+    <!-- Profile Section -->
+    <section id="profile">
+        <h2>Profile</h2>
+        <p>Name: Punit Kanzariya</p>
+        <p>Email: punitkanzariya@gmail.com</p>
+        <button id="Logout">Logout</button>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
